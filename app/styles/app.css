@@ -1,0 +1,276 @@
+:root {
+  --basic-color: #8c8c85;
+  --basic-bg-color: #fafaf7;
+}
+
+.ember-application {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f6f7;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: var(--basic-color);
+}
+
+button a {
+  color: inherit;
+}
+
+.casino__button {
+  padding: 10px;
+  background-color: var(--basic-color);;
+  color: #ffffff;
+  min-width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.casino__button a {
+  color: inherit;
+  text-decoration: unset;
+}
+
+.casino__container {
+  width: 90%;
+  height: 85vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.casino__header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #f5f6f7;
+  position: relative;
+  justify-content: center;
+}
+
+.casino__header-icons {
+  color: var(--basic-color);
+  position: absolute;
+  right: 10px
+}
+
+.casino__section {
+  height: calc(100% - 70px);
+}
+
+.casino__tabs {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.casino__tab {
+  min-width: 130px;
+  text-align: center;
+  color: var(--basic-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.casino__tab-link {
+  display: flex;
+  padding: 7px;
+  justify-content: center;
+  flex: 1;
+  text-decoration: unset;
+  color: var(--basic-color);
+  border: 1px solid var(--basic-color);
+}
+
+.casino__tab-link.active {
+  color: #ffffff;
+  background-color: var(--basic-color);
+}
+
+.casino__block {
+  /*height: 20%;*/
+}
+
+.casino__filters {
+  padding-left: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f5f6f7;
+  display: flex;
+  justify-content: center;
+}
+
+.casino__search, input {
+  border: 1px solid var(--basic-color);
+  display: inline-block;
+  border-radius: 5px;
+  color: var(--basic-color);
+  height: 30px;
+  width: 200px;
+}
+
+.casino__search input {
+  border: none;
+  outline: none;
+  width: 165px;
+  height: 100%;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.games__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80%;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+  background-color: var(--basic-bg-color);
+}
+
+.game {
+  width: 18.8%;
+  height: max-content;
+  margin-left: 1%;
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.game__provider {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+game__provider > span {
+  font-size: 14px;
+}
+
+.game__info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px 10px 10px;
+}
+
+div.game__info-container > * {
+  margin: 0;
+}
+
+.icon__ellipsis {
+  font-size: 20px;
+  color: var(--basic-color);
+  position: relative;
+  top: 2px;
+}
+
+.game__provider > span {
+  font-size: 14px;
+}
+
+.game__title {
+  font-size: 16px;
+}
+
+.game__category {
+  font-size: 12px;
+}
+
+.settings__container {
+  min-width: 250px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  border-radius: 4px;
+  z-index: 41;
+}
+
+.game__settings-item {
+  border-bottom: 1px solid var(--basic-color);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  justify-content: space-between;
+  padding-right: 15px;
+  font-size: 14px;
+}
+.game__settings-item:nth-child(1) {
+  justify-content: center;
+  padding: 0;
+  font-size: 15px;
+}
+
+.game__settings-item:nth-child(3) {
+  border-bottom: none;
+}
+
+.game__settings-item i {
+  font-size: 11px;
+}
+
+.game__settings-item:nth-child(1) > button {
+  position: absolute;
+  left: 10px;
+}
+
+.settings__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.change__title {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 14px;
+  padding-top: 3px;
+  margin-top: 4px;
+}
+
+.change__game-info {
+  padding: 10px;
+}
+
+.change__game-info > span {
+  font-size: 14px;
+}
+
+.save__discard {
+  border-top: 1px solid var(--basic-color);
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.save__discard > button {
+  height: 100%;
+  width: 50%;
+}
+
+.save__discard > button:nth-child(1) {
+  border-right: 1px solid var(--basic-color);
+}

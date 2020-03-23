@@ -1,0 +1,11 @@
+<div class="casino__filters">
+  <div class="casino__search">
+    <input {{on "input" (fn this.onScroll target="event")}} placeholder="Search" type="text">
+    {{fa-icon "search"}}
+  </div>
+</div>
+<div class="games__container"  role="scrollbar" {{on "scroll" (fn this.onScroll target="event")}}>
+  {{#each this.games as |game|}}
+    <Game @game={{game}} @update={{this.update}}/>
+  {{/each}}
+</div>

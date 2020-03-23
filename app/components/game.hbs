@@ -1,0 +1,21 @@
+<div class="game">
+  <div class="game__provider">
+    <span>{{@game.provider}}</span>
+  </div>
+  <img src="/assets/img/thumb.jpg" alt="game">
+  <div class="game__info">
+    <div class="game__info-container">
+      <h3 class="game__title">{{@game.name}}</h3>
+      <p class="game__category">
+        {{@game.category.name}}
+      </p>
+    </div>
+    <button type="button" {{on "click" this.toggleShow}}>
+      {{fa-icon "ellipsis-v" class="icon__ellipsis"}}
+    </button>
+  </div>
+  {{#if this.isShow}}
+    <Game::Settings @game={{@game}}  @toggleShow={{this.toggleShow}} @update={{@update}}/>
+    <button type="button" class="settings__wrapper" {{on "click" this.toggleShow}}></button>
+  {{/if}}
+</div>

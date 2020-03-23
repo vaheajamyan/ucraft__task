@@ -1,0 +1,25 @@
+<div class="settings__container">
+  {{#if this.nestedPage}}
+    <div class="game__settings-item">
+      <button type="button" {{on "click" this.togglePage}}>
+        {{fa-icon 'arrow-left'}}
+      </button>
+      SOCIAL & SEO
+    </div>
+    <div class="change__game-info">
+      <span>Page title</span>
+      <input value={{@game.name}} class="change__title" type="text" {{on "input" (fn this.onInput target="event")}}>
+    </div>
+
+    <div class="save__discard">
+      <button type="button" {{on "click" @toggleShow}}>Discard</button>
+      <button type="button" {{on "click" (fn this.changeTitle @game)}}>Save</button>
+    </div>
+  {{else}}
+    <div class="game__settings-item ">EDIT GAME SETTINGS</div>
+    <button type="button" class="game__settings-item" {{on "click" this.togglePage}}>
+      Social & SEO
+      {{fa-icon 'arrow-right'}}
+    </button>
+  {{/if}}
+</div>

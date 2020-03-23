@@ -1,0 +1,33 @@
+<div class="casino__container">
+  <header class="casino__header">
+    <div class="casino__title">
+      CASINO APP
+    </div>
+    <div class="casino__header-icons">
+      <button type="button">
+        {{fa-icon "question-circle"}}
+      </button>
+      <button type="button">
+        <LinkTo @route="index">
+          {{fa-icon "times"}}
+        </LinkTo>
+      </button>
+    </div>
+  </header>
+  <section class="casino__section">
+    <div class="casino__block">
+      <div class="casino">
+        <ul class="casino__tabs">
+          {{#each @model as |nav|}}
+            <li class="casino__tab">
+              <LinkTo @route={{nav.link}} class="casino__tab-link">
+                {{nav.name}}
+              </LinkTo>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{outlet}}
+  </section>
+</div>
